@@ -1,31 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <mdc-layout-app>
+      <mdc-toolbar slot="toolbar" fixed>
+        <mdc-toolbar-row>
+          <mdc-toolbar-section align-start >
+            <mdc-toolbar-menu-icon event="toggle-drawer"></mdc-toolbar-menu-icon>
+            <mdc-toolbar-title>Shadow Dashboard</mdc-toolbar-title>
+          </mdc-toolbar-section>
+        </mdc-toolbar-row>
+      </mdc-toolbar>
+      <mdc-drawer slot="drawer" toggle-on="toggle-drawer">
+        <mdc-drawer-list>
+          <mdc-drawer-item start-icon="storage" to="nodes">Nodes</mdc-drawer-item>
+          <mdc-drawer-item start-icon="cloud" to="subscriptions">Subscriptions</mdc-drawer-item>
+          <mdc-drawer-item start-icon="settings">Settings</mdc-drawer-item>
+        </mdc-drawer-list>
+      </mdc-drawer>
+      <main class="content" >
+        <router-view/>
+      </main>
+    </mdc-layout-app>
   </div>
 </template>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>

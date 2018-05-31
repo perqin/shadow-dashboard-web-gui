@@ -1,17 +1,19 @@
 language: node_js
 node_js:
-  - "node"
+- node
 cache:
   yarn: true
   directories:
-    - "node_modules"
+  - node_modules
 script: yarn build
-# before_deploy: sh scripts/travis-before-deploy.sh
-# deploy:
-#   provider: releases
-#   api_key: "GITHUB OAUTH TOKEN"
-#   file_glob: true
-#   file: shadow-dashboard-web-gui-*.zip
-#   skip_cleanup: true
-#   on:
-#     tags: true
+before_deploy: sh scripts/travis-before-deploy.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: lwqdDIqQI7RHcPLqAAAH98sD+LTuO4Oe3TPBetKhW2ozVksnfJGwYZwbU/3OrDYTMYF5fMN3zzBSYqXOGa0b2BLtX5qkjT80d9dxWNxt9zPUrsalouuS/EqiBZunF31Ku8FnllOkAuXH++gAX/lsrwRUO0GXSRzxuk3taCQADyk+RvPP+yElUQJdB1Smm3MfBY9+YvfT/wvfKdqMpxzzJKLhx9oSetq8oAwcyJe1idOru2B//OPavVrFEY8ZUF3DyvkAB9mpSxShiQfsmt5EjB/SXXm6Z7sETugCrePK0iiTrS9IUJtXMRYt15tl7TgR1oF5/ySUcmH2VvKY7uFnvVsu9nvqSyn2VlP/qFTKa/src4zPRivumbdXIPKBSiIPXpVNYThg9L5fdaX8XVSyuiEKLDerw6/g07/BI61fuCTPhrqu+tIK/FfYMsZQh+90N2hjKQwXfT9AeJy67XtgvlnLNuoU5rHc7N/3J88M3bB0usD6t4wYOtcLDt3EyvCLJK7Pa7obrVRbj3thDIoZQNMyD1ux8pesUEIDasIEBSA/dNVtN1Jc3Vj0kVg9NvyJLXLa1JFN3cjXd93XC0j98xvDNwoQthR6HwHSZu5wIa6UxPehTdxBFfbDDKtMXIydIDG67TpxEewz8yMo7OS6BRNpA8dhP7eAt31oNCLhQZ0=
+  file_glob: true
+  file: shadow-dashboard-web-gui-*.zip
+  skip_cleanup: true
+  on:
+    repo: perqin/shadow-dashboard-web-gui
+    tags: true

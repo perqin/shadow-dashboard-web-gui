@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+script: yarn build
+# before_deploy: sh scripts/travis-before-deploy.sh
+# deploy:
+#   provider: releases
+#   api_key: "GITHUB OAUTH TOKEN"
+#   file_glob: true
+#   file: shadow-dashboard-web-gui-*.zip
+#   skip_cleanup: true
+#   on:
+#     tags: true

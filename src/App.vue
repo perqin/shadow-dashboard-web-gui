@@ -22,3 +22,12 @@
     </mdc-layout-app>
   </div>
 </template>
+
+<style>
+html,body,
+#app,
+#app .mdc-layout-app,
+#app .mdc-layout-app .content {
+  height: 100%;
+}
+</style>

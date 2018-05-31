@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="nodes-content">
     <!-- TODO: List Group by Subscriptions -->
-    <mdc-list>
+    <mdc-list interactive>
       <mdc-list-item v-for="node in nodes" :key="node.id">
         {{ node.remarks && node.remarks !== '' ? node.remarks : node.server }}
         <div slot="end-detail">
@@ -14,13 +14,9 @@
 
 <script>
 import { mapState } from 'vuex'
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'nodes',
-  components: {
-    HelloWorld
-  },
   computed: mapState([
     'nodes'
   ]),
@@ -34,3 +30,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.nodes-content {
+  height: 100%;
+  overflow-y: auto;
+}
+</style>
+

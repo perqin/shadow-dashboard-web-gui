@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/shadow-dashboard-web-gui-*/
+/shadow-dashboard-web-gui-*.zip
 
 # local env files
 .env.local

@@ -1,6 +1,7 @@
 #!/bin/sh
 
-NAME="shadow-dashboard-web-gui-${git describe --tags}"
+TAG=$(git describe --tags)
+NAME="shadow-dashboard-web-gui-$TAG"
 
 mv dist/ $NAME
 

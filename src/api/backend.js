@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://localhost:4566'
+  baseURL: process.env.VUE_APP_BACKEND_BASE_URL
 })
 
 export const Subscriptions = {

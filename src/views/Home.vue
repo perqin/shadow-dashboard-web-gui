@@ -11,13 +11,20 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .home .mdc-display {
+  width: 100%;
   text-align: center;
   margin: 0;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 </style>
 

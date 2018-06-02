@@ -4,6 +4,18 @@ const request = axios.create({
   baseURL: process.env.VUE_APP_BACKEND_BASE_URL
 })
 
+export const Nodes = {
+  getConfig () {
+    return request('/nodes/config').then(res => res.data)
+  },
+  updateConfig (config) {
+    return request('/nodes/config', {
+      method: 'put',
+      data: config
+    })
+  }
+}
+
 export const Subscriptions = {
   createOne (subscription) {
     return request(`/subscriptions`, {
@@ -31,6 +43,18 @@ export const Subscriptions = {
   deleteOne (id) {
     return request(`/subscriptions/${id}`, {
       method: 'delete'
+    })
+  }
+}
+
+export const Cow = {
+  getConfig () {
+    return request('/cow/config').then(res => res.data)
+  },
+  updateConfig (config) {
+    return request('/cow/config', {
+      method: 'put',
+      data: config
     })
   }
 }

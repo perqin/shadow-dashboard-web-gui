@@ -11,9 +11,10 @@
       </mdc-toolbar>
       <mdc-drawer slot="drawer" toggle-on="toggle-drawer">
         <mdc-drawer-list>
+          <mdc-drawer-item start-icon="dashboard" to="/">Home</mdc-drawer-item>
           <mdc-drawer-item start-icon="storage" to="nodes">Nodes</mdc-drawer-item>
           <mdc-drawer-item start-icon="cloud" to="subscriptions">Subscriptions</mdc-drawer-item>
-          <mdc-drawer-item start-icon="settings">Settings</mdc-drawer-item>
+          <mdc-drawer-item start-icon="settings" to="settings">Settings</mdc-drawer-item>
         </mdc-drawer-list>
       </mdc-drawer>
       <main class="content" >

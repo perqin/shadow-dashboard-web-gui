@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Nodes from './views/Nodes.vue'
 import Subscriptions from './views/Subscriptions.vue'
+import Settings from './views/Settings.vue'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/subscriptions',
       name: 'subscriptions',
       component: Subscriptions
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings
     }
   ]
 })
